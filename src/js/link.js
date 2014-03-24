@@ -4,24 +4,27 @@ function get_domain(url){
    * return:    string
    */
    var result;
-
-   if(url.match(/.*\..*\..*/)){ // *.*.* e.g. www.google.com
-     result = RegExp("http:\/\/(.*)\/?").exec(url);
-     if(result !== null){
-       return result[1];
-     }else{
-       return "";
-     } 
-   }else if(url.match(/.*\..*/)){ // *.* e.g. google.com
-     result = RegExp("http:\/\/(.*)\/?").exec(url);
-     if(result !== null){
-       return "www." + result[1];
-     }else{
-       return "";
-     }
-   }else{
-     return "";
-   }
+  if(url !== null){
+    if(url.match(/.*\..*\..*/)){ // *.*.* e.g. www.google.com
+      result = RegExp("http:\/\/(.*)\/?").exec(url);
+      if(result !== null){
+        return result[1];
+      }else{
+        return "";
+      } 
+    }else if(url.match(/.*\..*/)){ // *.* e.g. google.com
+      result = RegExp("http:\/\/(.*)\/?").exec(url);
+      if(result !== null){
+        return "www." + result[1];
+      }else{
+        return "";
+      }
+    }else{
+      return "";
+    }
+  }else{
+    return "";
+  }
 }
 
 function init_link_node_button(button, text, func){
@@ -111,7 +114,7 @@ function add_link(storage){
    * return:    int
    */
   var links = storage.links;
-  var data = get_input(["url", "title"], ["URL", "Title"]);
+  var data = get_input(["url", "title"], ["URL", "Title"], ["",""]);
   if(data.url === "" || data.title === ""){
     return 1;
   }
