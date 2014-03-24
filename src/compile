@@ -1,0 +1,16 @@
+#!/bin/bash
+# Creates a standalone html file from source tree
+
+>tls.html
+
+echo "<title>Link Saver</title>" >> tls.html
+
+echo "<style>" >> tls.html
+cat css/*.css >> tls.html
+echo "</style>" >> tls.html
+
+sed -n '6,13p' index.html >> tls.html # Update this if you edit index.html
+
+echo "<script>" >> tls.html
+cat js/*.js >> tls.html
+echo "</script>" >> tls.html
