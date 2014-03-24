@@ -1,11 +1,15 @@
-function get_input(vars, prompts){
+function get_input(vars, prompts, defaults){
   /*
-   * arguments: string array vars, string array prompts
+   * arguments: string array vars, string array prompts, string array defaults
    * return:    object
    */
   var i, arr = {};
   for(i = 0; i < vars.length; i++){
-    arr[vars[i]] = prompt(prompts[i]);
+    if(typeof defaults[i] !== "undefined"){
+      arr[vars[i]] = prompt(prompts[i],defaults[i]);
+    }else{
+      arr[vars[i]] = prompt(prompts[i]);
+    }
   }
   return arr;
 }

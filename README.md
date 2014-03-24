@@ -24,12 +24,10 @@ Right now, the structure is this:
 
 ## Todo
 
-* add delete link functionality (link.js)
-  * with ability to specify range
 * don't use prompt for input--use a proper form (input.js)
   * maybe create a `form()` function to amend that
-* add edit link functionality (link.js)
 * add a `paradigms` branch that adds paradigm functionality (paradigms:paradigm.js)
 * come up with a better name than "paradigm"
-* possible search functionality (link.js)
+  * How about tags/filters? Use tags that can be applied to links, and default to `All`. Listing existing tags with the ability to filter by them
+* search functionality (link.js)
 
