@@ -1,3 +1,18 @@
+/*
+ * main.js
+ * purposes:
+ *   code entry point
+ *   provide interface to DOM and window properties
+ */
+
+function get_window_width(){
+  if(typeof window.document.width !== "undefined"){
+    return document.width;
+  }else if(typeof window.innerWidth !== "undefined"){
+    return innerWidth;
+  }
+}
+
 function main(){
   var storage = get_storage();
   var init_events_exit;

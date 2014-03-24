@@ -39,6 +39,7 @@ body{
   border: 1px solid #ccc;
   padding: 5px;
   background: #fff;
+  border-radius:5px;
 }
 .button.tool:hover{
   background: #eee;
@@ -51,9 +52,22 @@ body{
 .links{
   list-style: none;
 }
+.button.link{
+  border: 1px solid #ccc;
+  padding: 5px;
+  background: #fff;
+  width: 60px;
+  height: 30px;
+  border-radius:5px;
+}
+.button.link:hover{
+  background: #eee;
+  cursor: pointer;
+}
 .link{
   background: #fff;
   padding: 15px;
+  display:inline-block;
 }
 .link:nth-child(even){
   background: #f7f7f7;
